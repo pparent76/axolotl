@@ -6,7 +6,7 @@ sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.golang
   - org.freedesktop.Sdk.Extension.node14
-command: axolotl
+command: run.sh
 base: io.atom.electron.BaseApp
 base-version: '20.08'
 tags:
@@ -74,5 +74,11 @@ modules:
     sources:
       - type: git
         url: "https://github.com/nanu-c/axolotl"
-        tag: main
+        tag: use-flatpak-electron
         dest: src/github.com/nanu-c/axolotl
+      # Wrapper to launch the app
+      - type: script
+        dest-filename: run.sh
+        commands:
+          - axolotl -e server
+          - electron /app/bin/axolotl-web/dist
