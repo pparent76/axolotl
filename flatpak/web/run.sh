@@ -4,7 +4,7 @@
 
 programs=(
   'echo starting axolotl-web'
-  'electron /app/bin/axolotl-web/dist'
+  'npm start'
   'echo starting axolotl'
   'axolotl -e server'
 )
