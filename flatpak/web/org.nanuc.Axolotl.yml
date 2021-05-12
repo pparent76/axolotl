@@ -81,5 +81,4 @@ modules:
       - type: script
         dest-filename: run.sh
         commands:
-          - axolotl -e server
-          - electron /app/bin/axolotl-web/dist
+          - axolotl -e server; electron /app/bin/axolotl-web/dist
