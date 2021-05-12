@@ -77,3 +77,9 @@ modules:
         url: "https://github.com/nanu-c/axolotl"
         tag: use-flatpak-electron
         dest: src/github.com/nanu-c/axolotl
+
+  - name: nodejs
+    sources:
+      - type: archive
+        url: https://nodejs.org/dist/v14.16.1/node-v14.16.1.tar.xz
+        sha256: e44adbbed6756c2c1a01258383e9f00df30c147b36e438f6369b5ef1069abac3
