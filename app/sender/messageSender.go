@@ -7,6 +7,7 @@ import (
 	"os"
 	"strings"
 	"time"
+	"path/filepath"
 
 	log "github.com/sirupsen/logrus"
 
@@ -108,7 +109,9 @@ func SendMessage(s *store.Session, m *store.Message) (*store.Message, error) {
 
 		files := []store.Attachment{}
 		json.Unmarshal([]byte(m.Attachment), &files)
-		att, err = os.Open(files[0].File)
+		path := files[0].File
+		_, filename := filepath.Split(path)
+		att, err = os.Open(path)
 		if err != nil {
 			log.Errorln("[axolotl] SendMessage FileOpend")
 			return nil, err
@@ -136,7 +139,7 @@ func SendMessage(s *store.Session, m *store.Message) (*store.Message, error) {
 			recipient = helpers.HexToUUID(recipient)
 		}
 	}
-	ts := SendMessageLoop(recipient, m.Message, s.IsGroup, att, m.Flags, s.ExpireTimer)
+	ts := SendMessageLoop(recipient, m.Message, s.IsGroup, att, filename, m.Flags, s.ExpireTimer)
 	log.Debugln("[axolotl] SendMessage", recipient, ts)
 	m.SentAt = ts
 	m.ExpireTimer = s.ExpireTimer
@@ -159,7 +162,7 @@ func SendMessage(s *store.Session, m *store.Message) (*store.Message, error) {
 }
 
 // SendMessageLoop sends a single message and also loops over groups in order to send it to each participant of the group
-func SendMessageLoop(to string, message string, group bool, att io.Reader, flags int, timer uint32) uint64 {
+func SendMessageLoop(to string, message string, group bool, att io.Reader, attName string, flags int, timer uint32) uint64 {
 	var err error
 	var ts uint64
 	var count int
@@ -187,10 +190,10 @@ func SendMessageLoop(to string, message string, group bool, att io.Reader, flags
 			}
 		} else {
 			if group {
-				ts, err = textsecure.SendGroupAttachment(to, message, att, timer)
+				ts, err = textsecure.SendGroupAttachment(to, message, att, attName timer)
 			} else {
 				log.Printf("[axolotl] SendMessageLoop sendAttachment")
-				ts, err = textsecure.SendAttachment(to, message, att, timer)
+				ts, err = textsecure.SendAttachment(to, message, att, attName, timer)
 			}
 		}
 		if err == nil {
