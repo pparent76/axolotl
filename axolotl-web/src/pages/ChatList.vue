@@ -26,7 +26,7 @@
             <div v-if="chat.IsGroup" class="badge-name">
               <img
                 class="avatar-img"
-                :src="'http://localhost:9080/avatars?file=' + chat.Tel"
+                :src="'http://localhost:9080/avatars/group?file=' + chat.Tel"
                 alt="Avatar image"
                 @error="onImageError($event)"
               >

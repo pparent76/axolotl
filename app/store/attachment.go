@@ -12,7 +12,7 @@ import (
 
 	"github.com/nanu-c/axolotl/app/config"
 	"github.com/nanu-c/axolotl/app/helpers"
-	"github.com/signal-golang/textsecure"
+	"github.com/signal-golang/textsecure/attachments"
 	log "github.com/sirupsen/logrus"
 )
 
@@ -22,7 +22,7 @@ type Attachment struct {
 	CType    int
 }
 
-func SaveAttachment(a *textsecure.Attachment) (Attachment, error) {
+func SaveAttachment(a *attachments.Attachment) (Attachment, error) {
 
 	id := make([]byte, 16)
 	_, err := io.ReadFull(rand.Reader, id)

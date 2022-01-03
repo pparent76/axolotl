@@ -38,7 +38,6 @@ var (
 func Run() error {
 	log.Printf("[axolotl] Starting axolotl ws")
 	go syncClients()
-	go attachmentServer()
 	go websocketSender()
 	webserver()
 	return nil
@@ -448,7 +447,8 @@ func webserver() {
 
 		http.Handle("/", http.FileServer(http.Dir(path)))
 		http.HandleFunc("/attachments", attachmentsHandler)
-		http.HandleFunc("/avatars", avatarsHandler)
+		http.HandleFunc("/avatars/group", avatarsGroupHandler)
+		http.HandleFunc("/avatars/profile", avatarsProfileHandler)
 		http.HandleFunc("/ws", wsEndpoint)
 
 		log.Error("[axolotl] webserver error", http.ListenAndServe(config.ServerHost+":"+config.ServerPort, nil))

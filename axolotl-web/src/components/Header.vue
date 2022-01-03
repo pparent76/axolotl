@@ -26,13 +26,21 @@
                   <img
                     class="avatar-img"
                     :src="
-                      'http://localhost:9080/avatars?file=' + currentChat.Tel
+                      'http://localhost:9080/avatars/group?file=' + currentChat.Tel
                     "
                     @error="onImageError($event)"
                   />
                   <font-awesome-icon icon="user-friends" />
                 </div>
-                <div v-else class="group-badge">{{ currentChat.Name[0] }}</div>
+                <div v-else class="group-badge">
+                  <img
+                    class="avatar-img"
+                    :src="
+                      'http://localhost:9080/avatars/profile?file=' + currentChat.UUID
+                    "
+                    @error="onImageError($event)"
+                  />
+                  {{ currentChat.Name[0] }}</div>
               </div>
               <div class="col-10 center">
                 <div class="row">
