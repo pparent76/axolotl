@@ -1,4 +1,12 @@
 cloud.google.com/go v0.26.0/go.mod h1:aQUYkXzVsufM+DwF1aE+0xfcU+56JwCaLick0ClmMTw=
+github.com/Blackoverflow/textsecure v1.4.3-0.20220121091304-dc2f2186531a h1:2SE8ifJg3OmP9hqlVC9LHzdSa8fHEwhDTVwSAnd/TM8=
+github.com/Blackoverflow/textsecure v1.4.3-0.20220121091304-dc2f2186531a/go.mod h1:teNGhh4TcoKEfPta0A8JKq25zerVF+mh1ZYWAelVeGQ=
+github.com/Blackoverflow/textsecure v1.4.3-0.20220125223703-c50e0a650630 h1:deB3smLFqUcMU75mV11ltf7SibBLDDD+qE32sXbzPrg=
+github.com/Blackoverflow/textsecure v1.4.3-0.20220125223703-c50e0a650630/go.mod h1:teNGhh4TcoKEfPta0A8JKq25zerVF+mh1ZYWAelVeGQ=
+github.com/Blackoverflow/textsecure v1.4.3-0.20220125224205-c998925bc8a6 h1:70XeZhbFE3NleakNLVeXWZAPseeXIQy+B54HBGIOOOU=
+github.com/Blackoverflow/textsecure v1.4.3-0.20220125224205-c998925bc8a6/go.mod h1:teNGhh4TcoKEfPta0A8JKq25zerVF+mh1ZYWAelVeGQ=
+github.com/Blackoverflow/textsecure v1.4.3-0.20220125224527-886bd196f99d h1:1JvEd8VpJgL4Hba2925ZIO8yoRw/PELCAM/RHuDECts=
+github.com/Blackoverflow/textsecure v1.4.3-0.20220125224527-886bd196f99d/go.mod h1:teNGhh4TcoKEfPta0A8JKq25zerVF+mh1ZYWAelVeGQ=
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
 github.com/PuerkitoBio/goquery v1.5.1/go.mod h1:GsLWisAFVj4WgDibEWF4pvYnkVQBpKBKeU+7zCJoLcc=
 github.com/andybalholm/cascadia v1.1.0/go.mod h1:GsXiBklL0woXo1j/WYWtSYYC4ouU9PqHO0sqidkEA4Y=
