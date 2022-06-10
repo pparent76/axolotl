@@ -146,7 +146,7 @@ export default {
 }
 .number {
   font-size: 1.8rem;
-  color: #2090ea;
+  color: #0a6af4;
 }
 .about {
   margin-top: 20px;

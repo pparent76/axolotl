@@ -49,7 +49,7 @@ export default {
       arraySize: null,
       boxLength: null,
       direction: null,
-      boxColor: "#2090ea",
+      boxColor: "#0a6af4",
       clearFlag: false,
     };
   },

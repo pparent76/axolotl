@@ -93,7 +93,7 @@ main {
   border-radius: 0px;
 }
 .btn-primary {
-  background-color: #2090ea;
+  background-color: #0a6af4;
 }
 .no-entries {
   height: 90vh;

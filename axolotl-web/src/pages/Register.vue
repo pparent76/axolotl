@@ -129,7 +129,7 @@ h2 {
 }
 #heart {
   font-size: 2rem;
-  color: #2090ea;
+  color: #0a6af4;
 }
 .rateLimit-error {
   width: 90%;

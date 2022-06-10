@@ -73,7 +73,7 @@ export default {
 }
 #heart {
   font-size: 2rem;
-  color: #2090ea;
+  color: #0a6af4;
 }
 h1 {
   font-size: 1.5rem;

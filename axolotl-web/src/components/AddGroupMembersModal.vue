@@ -154,7 +154,7 @@ export default {
   position: fixed;
   bottom: 16px;
   right: 10px;
-  background-color: #2090ea;
+  background-color: #0a6af4;
   color: #fff;
   border-radius: 50%;
   width: 45px;
@@ -208,7 +208,7 @@ export default {
 }
 .modal-header {
   border-bottom: none;
-  background-color: #2090ea;
+  background-color: #0a6af4;
   border-radius: 0;
   color: #fff;
 }

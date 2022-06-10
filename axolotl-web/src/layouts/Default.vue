@@ -66,7 +66,7 @@ export default {
 <style scoped>
 .header {
   padding: 5px 0;
-  background-color: #2090ea;
+  background-color: #0a6af4;
   z-index: 2;
   box-shadow: 0px -11px 14px 7px rgba(0, 0, 0, 0.75);
   min-height: 49px;
@@ -75,7 +75,7 @@ export default {
   color: #fff;
 }
 .dropdown-menu {
-  border: 1px solid #2090ea;
+  border: 1px solid #0a6af4;
 }
 main {
   padding-top: 50px;

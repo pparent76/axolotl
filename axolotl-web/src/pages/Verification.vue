@@ -98,7 +98,7 @@ export default {
   .ofcold__security-code-wrapper
   .ofcold__security-code-field
   .form-control {
-  border: 2px solid #2090ea !important;
+  border: 2px solid #0a6af4 !important;
 }
 .verify .spinner {
   display: flex;
